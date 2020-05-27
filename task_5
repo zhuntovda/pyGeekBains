@@ -1,0 +1,15 @@
+proceeds = float(input('Введите значение выручки фирмы: '))
+costs = float(input('Введите значение издержек фирмы: '))
+
+if proceeds > costs:
+    print('фирма отработала в прибыль')
+    profit = proceeds - costs
+    rent = profit / proceeds
+    print(f'рентабельность соствавила: {round(rent, 2)}')
+elif proceeds < costs:
+    print('фирма отработала в убыток')
+else:
+    print('фирма отработала в 0')
+
+peoples = int(input('Введите численнность сотрудников: '))
+print(f'Коэффициент прибыли на одного сотрудника: {round(rent / peoples, 2)}')

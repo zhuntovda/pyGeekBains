@@ -1,2 +1,2 @@
-# pyGeekBains
+# pyGeekBrains
 Основы языка Python

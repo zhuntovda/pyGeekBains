@@ -1,0 +1,9 @@
+seconds = int(input('Введите время в секунда: '))
+
+days = seconds // 86400
+hours = (seconds // (60 * 60)) % 24
+minutes = (seconds // 60) % 60
+seconds = seconds % 60
+
+print(
+    f'По введенным данным было получено {days} день(-ей) и время составило {str(hours).rjust(2, "0")}:{str(minutes).rjust(2, "0")}:{str(seconds).rjust(2, "0")}')

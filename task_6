@@ -1,0 +1,10 @@
+km_firstday = float(input('Введите число километров в первый день: '))
+km_lastday = float(input('Введите число километров в последний день: '))
+
+km_in_day = km_firstday
+i = 1
+while km_in_day < km_lastday:
+    km_in_day = km_in_day * 1.1
+    i += 1
+
+print(f'При приросте результата на 10% в день, мы получим желаемый результат через {i} дней.')

@@ -1,0 +1,14 @@
+first_name = input('введите Ваше имя: ')
+last_name = input('введите Вашу фамилию: ')
+second_name = input('введите Ваше отчество: ')
+
+print(f'Добрый день {last_name} {first_name} {second_name}')
+
+age = int(input('Введите Ваш возраст: '))
+
+if age < 18:
+    print(f'Молодость берет свое {first_name.upper()}!')
+elif age < 65:
+    print(f'{first_name.upper()}, Вас мы и ждали!')
+else:
+    print(f'{first_name.upper()} {second_name.upper()}, Вас мы и ждали!')

@@ -1,0 +1,11 @@
+str_n = input('Введите число n, для получения результата формулы n+nn+nnn: ')
+
+result = 0
+i = 0
+str_all = ''
+while i < 3:
+    str_all = str_all + str_n
+    result = result + int(str_all)
+    i += 1
+
+print('значение формулы равно: ', result)

@@ -1,0 +1,13 @@
+str_number = input('введите число для находление самой большой цифры: ')
+
+big_num = 0
+i = 0
+while i < len(str_number):
+    if int(str_number[i]) == 9:
+        big_num = 9
+        break
+    elif int(str_number[i]) > big_num:
+        big_num = int(str_number[i])
+    i += 1
+
+print(f'максимальная цифра {big_num}')

@@ -1,0 +1,20 @@
+
+seasons_list = ["зима", "зима", "весна", "весна", "весна", "лето", "лето", "лето", "осень", "осень", "осень", "зима"]
+seasons_dict = {"зима": [1, 2, 12], "весна": [3, 4, 5], "лето": [6, 7, 8], "осень": [9, 10, 11]}
+
+month_number = 0
+while True:
+    month_number = input("Введите месяц числом от 1 до 12: ")
+
+    if month_number.isnumeric() and 0 < int(month_number) < 13:
+        month_number = int(month_number)
+        break
+    else:
+        print("Введены не корректные данные, повторите ввод")
+
+print(f"сезон из листа: {seasons_list[month_number-1]}")
+
+for key, value in seasons_dict.items():
+    if value.count(month_number) > 0:
+        print(f"сезон из словаря: {key}")
+        break

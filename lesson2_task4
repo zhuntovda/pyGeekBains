@@ -1,0 +1,7 @@
+
+my_str = input("Введите строку для разбора на слова: ")
+
+i = 1
+for el in my_str.split():
+    print(f"{i}. {el[1:10]}")
+    i += 1

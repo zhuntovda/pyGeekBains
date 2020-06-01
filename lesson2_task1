@@ -1,0 +1,9 @@
+
+my_list = [99, 0.23, "Yes", None, [1, "No"], ("go", ["stop", "low"]), set("katamaran")]
+
+for el in my_list:
+    el_type = type(el)
+    if el_type == list or el_type == tuple or el_type == tuple:
+        print(f"{el_type}  с количеством элементов {len(el)}")
+    else:
+        print(el_type)

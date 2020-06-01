@@ -1,0 +1,15 @@
+rating_list = [0]
+
+while True:
+    number_rating = int(input("Введите целое число для размещения в листе рейтинга: "))
+    if rating_list.count(number_rating) == 0:
+        for i in range(len(rating_list)):
+            if rating_list[i] < number_rating:
+                rating_list.insert(i, number_rating)
+                break
+            elif i == len(rating_list) - 1:
+                rating_list.append(number_rating)
+    else:
+        rating_list.insert(rating_list.index(number_rating) + rating_list.count(number_rating), number_rating)
+
+    print(rating_list)

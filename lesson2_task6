@@ -1,0 +1,27 @@
+dict_tuple = ("название", "цена", "количество", "ед")
+products_list = []
+
+i = 1
+while True:
+
+    dict_characters = dict()
+    for key in dict_tuple:
+        dict_characters[key] = input(f"Введите {key}: ")
+
+    products_list.append((i, dict_characters))
+
+    i += 1
+    if input("Ввести еще товар (Y): ").upper() != "Y":
+        break
+
+dict_characters = dict()
+for key in dict_tuple:
+    dict_characters[key] = set()
+
+for el in products_list:
+    for key, value in el[1].items():
+        print(value)
+        dict_characters[key].add(value)
+
+print(products_list)
+print(dict_characters)

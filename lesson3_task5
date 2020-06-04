@@ -1,0 +1,25 @@
+print("Добро пожаловать в программу 'СУМАСШЕДШИЕ ЧИСЛА' (вводим числа через пробел, стоп по слову ""ТОРМОЗИ"")")
+globSumm = 0
+def CrazySumm(strSumm):
+
+    global globSumm
+
+    listSumm = strSumm.split()
+    for i in range(len(listSumm)):
+
+        if listSumm[i] == "ТОРМОЗИ":
+            return True
+        try:
+            x = int(listSumm[i])
+        except ValueError:
+            print(f"Что то не так с - {listSumm[i]}, не хочет быть числом, не возьму его в сумасшедшую сумму!")
+            continue
+
+        globSumm = globSumm + x
+
+    print(f"Сумасшедшая сумма {globSumm}")
+    return False
+
+while True:
+   if CrazySumm(input("Введите через пробел цифры для суммы или стоп-слово ")):
+       break

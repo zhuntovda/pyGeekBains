@@ -1,0 +1,11 @@
+
+def MaxSumm(Var1, Var2, Var3):
+    """Сортировкой мы победим систему"""
+    listVar = [Var1, Var2, Var3]
+    try:
+        listVar.sort()
+        return float(listVar[1])+float(listVar[2])
+    except TypeError or ValueError:
+        return "Ошибка введенных данных!"
+
+print(MaxSumm(input("введите первое число: "), input("введите второе число: "), input("введите третье число: ")))

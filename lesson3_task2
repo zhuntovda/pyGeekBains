@@ -1,0 +1,5 @@
+
+def PrintUserD(tel, city, Name, Soname, email, birthyear):
+    print(f"Это самый {Soname} {Name} из {city} родился в {birthyear} и до сих пор ползуется {tel} и сидит на {email}")
+
+PrintUserD(Name=input(f"Введите имя: "), Soname=input(f"Введите фамилию: "), birthyear=input(f"Введите год: "), city=input(f"Введите город: "), email=input(f"Введите почту: "), tel=input(f"Введите телефон: "))

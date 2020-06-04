@@ -1,0 +1,30 @@
+def MyPow(x, y):
+
+    try:
+        intx = int(x)
+        inty = int(y)
+    except ValueError:
+        return False, "Числа должны быть целымиб иначе все сломается"
+
+    if intx < 0 or inty >=0:
+        return False, "Ыкс должен быть больше нуляб а вот Игрык меньше!"
+
+    intx_cycle = intx
+    inty_cycle = 0
+    while inty_cycle >= inty:
+        intx_cycle = intx_cycle/intx
+        inty_cycle -= 1
+
+    intx_str = intx ** inty
+
+    return True, f"Значит по циклу у нас {intx_cycle}, а по ** {intx_str}, с виду равно в приближении!"
+
+FlagStop = False
+
+while not FlagStop:
+    listRes = MyPow(input("Введит число положительно-целое: "),input("Введите степень отрицательно-целую:"))
+    print(listRes[1])
+    if listRes[0]:
+        break
+    else:
+        print("Будем просить значения в цикле пока не введем правильные!")

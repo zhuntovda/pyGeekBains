@@ -1,0 +1,14 @@
+
+def DivisionLocal(var1, var2):
+
+    """Деление первой переменной
+    на вторую переменную"""
+
+    try:
+        return float(var1)/float(var2)
+    except TypeError:
+        return "Не верное значение переменных, нужны цыфры"
+    except ZeroDivisionError:
+        return "Деление на 0?.. ну никак не могу!"
+
+print(f"{DivisionLocal(input('Первое число: '), input('Второе число: '))} - эт результат!")

@@ -1,0 +1,21 @@
+constOrd = ord("a") - ord("A")
+
+def strGoToLarge(strSmall):
+    listStr = strSmall.split()
+    listStrMax = []
+    for i in range(len(listStr)):
+        MaxWord = ""
+        for s in range(len(listStr[i])):
+            if s == 0:
+                MaxWord = MaxWord + FirstMax(listStr[i][s])
+            else:
+                MaxWord = MaxWord + listStr[i][s]
+        listStrMax.append(MaxWord)
+
+    return ' '.join(listStrMax)
+
+def FirstMax(Sym):
+    global constOrd
+    return chr(ord(Sym) - constOrd)
+
+print(f"Пам пам: {strGoToLarge(input('Введите строку маленькими символами англ яза: '))}")
